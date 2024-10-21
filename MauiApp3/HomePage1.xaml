@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.HomePage1"
+             Title="HomePage1"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="Auto,1*,1*,1*,1*" ColumnDefinitions="1*, 1*" Padding="0,20,20,0" HorizontalOptions="FillAndExpand">
+
+            <!-- Welcome -->
+            <Label Text="Morning, Alax" FontSize="Medium" TextColor="White" Grid.Row="0" Grid.Column="0" Margin="5"  HorizontalOptions="Start"/>
+            <!-- Apps -->
+            <Button ImageSource="apps.png"  WidthRequest="40" HeightRequest="40" Grid.Row="0" Grid.Column="1" Margin="5" HorizontalOptions="End" />
+
+            <!-- Lamp Card -->
+            <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="#A700FF" HeightRequest="180" Margin="5,10,10,5" >
+                <StackLayout>
+                    <HorizontalStackLayout  HorizontalOptions="FillAndExpand">
+                        <Image Source="lamp_icon.png" WidthRequest="30" HeightRequest="30"  HorizontalOptions="Start" />
+                        <Switch IsToggled="True" WidthRequest="30" HeightRequest="30"  HorizontalOptions="End" />
+                    </HorizontalStackLayout>
+                    <VerticalStackLayout  Padding="5,10,10,5">
+                        <Label Text="Lamp" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
+                        <Label Text="OPENED - 2hr 39 Min" TextColor="White" FontSize="Micro" />
+                    </VerticalStackLayout>
+                </StackLayout>
+            </Frame>
+            <!-- Add Member Card -->
+            <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="Gray"  HeightRequest="180"  Margin="5,10,10,5">
+                <StackLayout>
+                    <Label Text="Add Member" TextColor="White" FontAttributes="Bold" />
+                    <Label Text="Add New Family Members" TextColor="White" FontSize="Small" />
+                    <VerticalStackLayout HorizontalOptions="End">
+                        <Button Text="+" FontSize="Large" WidthRequest="30" HeightRequest="30"/>
+                        <Button Text="Settings" ImageSource="settings.png" WidthRequest="30" HeightRequest="30" />
+                    </VerticalStackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Home Lock Card -->
+            <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="1" BackgroundColor="#A5FF00" CornerRadius="10"   HeightRequest="180"  Margin="5,10,10,5">
+                <StackLayout>
+                    <Image Source="lock_icon.png" WidthRequest="30" HeightRequest="30" />
+                    <Label Text="Home Lock" FontAttributes="Bold" FontSize="Medium" />
+                    <Label Text="OPENED - 65% Energy Left" />
+                    <Switch IsToggled="True" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Tabs for Rooms -->
+            <!--<Frame Grid.Row="3" Grid.Column="0" BackgroundColor="Gray" CornerRadius="10" Grid.ColumnSpan="2"  HeightRequest="70">
+                <StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
+                    <Button Text="Living Room" BackgroundColor="Black" TextColor="White" FontSize="Micro" HeightRequest="35" />
+                    <Button Text="Kitchen" BackgroundColor="Black" TextColor="White"  FontSize="Micro"  HeightRequest="35"/>
+                    <Button Text="Bathroom" BackgroundColor="Black" TextColor="White"  FontSize="Micro" HeightRequest="35" />
+                    <Button Text="Pat Room" BackgroundColor="Black" TextColor="White"  FontSize="Micro" HeightRequest="35" />
+                    <Button Text="Garage" BackgroundColor="Black" TextColor="White"  FontSize="Micro"  HeightRequest="35"/>
+                </StackLayout>
+            </Frame>-->
+
+            <Frame Grid.Row="3" Grid.Column="0" CornerRadius="20" Padding="20" Margin="10" BackgroundColor="White">
+                <Frame.Shadow>
+                    <Shadow Brush="#32000000" Radius="10" Offset="0,5" />
+                </Frame.Shadow>
+                <VerticalStackLayout>
+                    <Label Text="Widget Title" FontSize="24" FontAttributes="Bold" TextColor="Black" />
+                    <Label Text="Widget description goes here. This can be a summary of relevant information." 
+                       FontSize="14" TextColor="Gray" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Thermostat Card -->
+            <Frame Grid.Row="4" Grid.Column="0" BackgroundColor="Gray" CornerRadius="10" Grid.ColumnSpan="1"  HeightRequest="180"  Margin="5,10,10,5">
+                <StackLayout>
+                    <Image Source="thermostat.png" WidthRequest="30" HeightRequest="30" />
+                    <Label Text="Thermostat" TextColor="White" FontAttributes="Bold" />
+                    <Label Text="28°C" TextColor="White" />
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="+" FontSize="Large" />
+                        <Button Text="-" FontSize="Large" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Smart TV Card -->
+            <Frame Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="#FFD500" CornerRadius="10" Padding="10" HeightRequest="180"  Margin="5,10,10,5">
+                <StackLayout>
+                    <Label Text="Smart TV" FontAttributes="Bold" FontSize="Medium" />
+                    <Label Text="On - Apple TV" />
+                    <Switch IsToggled="True" />
+                </StackLayout>
+            </Frame>
+
+
+
+        </Grid>
+
+
+    </ContentPage.Content>
+
+</ContentPage>

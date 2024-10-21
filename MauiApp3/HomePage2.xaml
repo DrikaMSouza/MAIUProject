@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.HomePage2"
+             BackgroundColor="Black" Title="HomePage2">
+
+    <!--<ContentPage.Content>-->
+
+    <Grid RowDefinitions="*, Auto" ColumnDefinitions="*, *" Padding="20">
+
+        <!-- Welcome and Power Button -->
+        <StackLayout Grid.Row="0" Grid.Column="0" Padding="10" BackgroundColor="Black" HeightRequest="200" WidthRequest="100" >
+            <Image Source="avatar_placeholder.png" WidthRequest="50" HeightRequest="50" />
+            <Button Text="Power" ImageSource="power_button.png" WidthRequest="50" HeightRequest="50" />
+            <Label Text="Welcome to Alax Room" TextColor="White" />
+        </StackLayout>
+
+        <!-- Security Card -->
+        <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#A5FF00" CornerRadius="10">
+            <StackLayout>
+                <Image Source="lock_icon.png" WidthRequest="30" HeightRequest="30" />
+                <Label Text="Security" FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="24/7 System On" />
+                <Switch IsToggled="True" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Air Conditioner -->
+        <Frame Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="#FFD500" CornerRadius="10">
+            <StackLayout>
+                <Label Text="Air Conditioner" FontAttributes="Bold" FontSize="Medium" />
+                <Label Text="28°C" FontSize="Large" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Up" />
+                    <Button Text="Down" />
+                </StackLayout>
+                <Switch IsToggled="True" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Room Lights -->
+        <Frame Grid.Row="2" Grid.Column="0" BackgroundColor="Gray" CornerRadius="10">
+            <StackLayout>
+                <Label Text="Room Lights" />
+                <Label Text="OFF - 30 Min" />
+                <Switch IsToggled="False" />
+            </StackLayout>
+        </Frame>
+
+        <!-- Additional Controls -->
+        <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Wi-Fi" />
+            <Button Text="Settings" />
+        </StackLayout>
+
+    </Grid>
+
+    <!--</ContentPage.Content>-->
+</ContentPage>
